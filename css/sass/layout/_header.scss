@@ -1,0 +1,349 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 21px;
+    z-index: 999;
+    @include transition(all 0.3s ease-in-out);
+
+    @include xs {
+        padding: 10px 0 8px;
+        background-color: $fff;
+        z-index: 9;
+
+        .header {
+            .black-logo {
+                display: block;
+            }
+
+            .white-logo {
+                display: none;
+            }
+
+            .user-anchor {
+                color: $black;
+
+                &:hover {
+                    color: $gold;
+                }
+            }
+        }
+    }
+
+    &.scroll {
+        padding: 10px 0 8px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        background-color: $fff;
+        position: fixed;
+
+        .logo {
+            width: 71px;
+
+            @include xs {
+                width: 50px;
+            }
+        }
+
+        .black-logo {
+            display: block;
+        }
+
+        .white-logo {
+            display: none;
+        }
+
+        .user-anchor {
+            color: $black;
+
+            &:hover {
+                color: $gold;
+            }
+        }
+
+        .lang {
+            display: none;
+        }
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .logo {
+        width: 99px;
+        display: block;
+        @include transition(all 0.3s ease-in-out);
+
+        @include xs {
+            width: 70px;
+        }
+    }
+
+    .white-logo {
+        display: block;
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    .black-logo {
+        display: none;
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    .mo-user-nav {
+        display: flex;
+        width: 255.19px;
+
+        @include xs {
+            width: auto;
+        }
+    }
+
+    .user-anchor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $fff;
+        font-size: 20px;
+        @include transition(all 0.3s ease-in-out);
+        position: relative;
+        margin-left: 29px;
+
+        @include xs {
+            margin-left: 20px;
+        }
+
+        &:last-of-type {
+            margin-left: 0;
+
+            @include xs {
+                margin-left: 0;
+            }
+        }
+
+        #{$ltr} & {
+            margin-right: 29px;
+            margin-left: 0;
+
+            @include xs {
+                margin-right: 20px;
+                margin-left: 0;
+            }
+
+            &:last-of-type {
+                margin-left: 0;
+                margin-right: 0;
+
+                @include xs {
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .text {
+            font-size: 16px;
+            margin-right: 8px;
+
+            #{$ltr} & {
+                margin-right: 0;
+                margin-left: 8px;
+            }
+
+            @include xs {
+                display: none;
+            }
+        }
+
+        &:hover {
+            color: $gold;
+
+            .count {
+                animation: vibe 0.7s ease forwards;
+            }
+        }
+
+        &.mo-search-icon {
+            &.xs-search {
+                display: none;
+            }
+
+            @include xs {
+                display: none;
+
+                &.xs-search {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .count {
+        position: absolute;
+        top: -3px;
+        right: -7px;
+        width: 15px;
+        height: 15px;
+        color: $fff;
+        font-size: 12px;
+        font-family: med;
+        background-color: $gold;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 15px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        @include sm {
+            padding-top: 5px;
+        }
+
+        #{$ltr} & {
+            right: auto;
+            left: 12px;
+
+        }
+    }
+}
+
+.xs-head {
+    height: 91px;
+}
+
+.lang {
+    position: absolute;
+    top: 0px;
+    left: 0;
+
+    @include xs {
+        display: none;
+    }
+
+    #{$ltr} & {
+        left: auto;
+        right: 0;
+    }
+
+    .lang-anchor {
+        font-size: 12px;
+        color: #939393;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @include transition(all 0.3s ease-in-out);
+
+        img {
+            margin-left: 10px;
+
+            #{$ltr} & {
+                margin-right: 10px;
+                margin-left: 0;
+            }
+        }
+
+        &:after {
+            content: "\e874";
+            font-family: 'Linearicons-Free';
+            font-size: 8px;
+            margin-right: 6px;
+
+            #{$ltr} & {
+                margin-right: 0;
+                margin-left: 6px;
+            }
+        }
+
+        &:hover {
+            color: $gold;
+
+            &:after {
+                color: $gold;
+            }
+        }
+
+    }
+
+    .lang-dropdown {
+        position: absolute;
+        width: 121px;
+        height: auto;
+        right: -22px;
+        top: 125%;
+        z-index: 10;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.13);
+        padding: 10px 10px 0;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: none;
+        @include transition(all 0.3s ease-in-out);
+
+        #{$ltr} & {
+            right: -19px;
+        }
+
+        &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-width: 6px;
+            border-color: transparent transparent #ffffff;
+            border-style: solid;
+            top: -12px;
+            position: absolute;
+            right: 26px;
+
+            #{$ltr} & {
+                right: auto;
+                left: 26px;
+            }
+        }
+
+        .lang-anchor {
+            width: 100%;
+            border-bottom: 1px solid #ededed;
+            padding-bottom: 8px;
+            margin-bottom: 6px;
+            justify-content: center;
+            color: $black;
+
+            &:hover {
+                color: $gold;
+            }
+
+            &:last-of-type {
+                border: none;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+
+
+    }
+
+    &:hover {
+        .lang-dropdown {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

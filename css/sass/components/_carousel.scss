@@ -1,0 +1,201 @@
+.main-slider {
+    position: relative;
+
+    .owl-dots {
+        position: absolute;
+        bottom: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include sm {
+            bottom: 10px;
+        }
+
+        .owl-dot {
+            background: rgba(#000, 0.6);
+            outline: none;
+            border: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4.5px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $gold;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $gold;
+            }
+        }
+    }
+}
+
+.slider-img {
+    height: 100vh;
+    width: 100%;
+    display: block;
+
+    @include xs {
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.Product-slider {
+    .owl-nav {
+        width: 0;
+        height: 0;
+
+        @include xs {
+            display: none;
+        }
+
+        button[class^=owl-] {
+            position: absolute;
+            top: 111px;
+            outline: none;
+            border: none;
+            color: #bdbdbd;
+            font-size: 24px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.owl-next {
+                left: -48px;
+            }
+
+            &.owl-prev {
+                right: -48px;
+            }
+
+            &:hover {
+                color: $text;
+            }
+        }
+    }
+
+    .owl-dots {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+
+        @include xs {
+            display: flex;
+        }
+
+        .owl-dot {
+            background: rgba(#000, 0.6);
+            outline: none;
+            border: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4.5px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $gold;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $gold;
+            }
+        }
+    }
+}
+
+.product {
+    width: 100%;
+    margin: auto;
+    padding-top: 9px;
+
+    @include xs {
+        width: 275px;
+        margin: auto;
+    }
+
+    .pro {
+        display: block;
+        width: 100%;
+    }
+
+    .item-info {
+        @include xs {
+            text-align: center;
+        }
+    }
+
+    .item-img {
+        max-width: 100%;
+        margin: auto;
+        height: 245px;
+
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include transition(all 0.5s ease-in-out);
+            backface-visibility: hidden;
+        }
+
+        &:hover {
+            img {
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    .pro-name {
+        font-size: 16px;
+        color: $text;
+        line-height: 1.375;
+        height: 44px;
+        @include transition(all 0.5s ease-in-out);
+        margin-top: 18px;
+        margin-bottom: 10px;
+        width: max-content;
+        max-width: 100%;
+
+        @include xs {
+            justify-content: center;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &:hover {
+            color: $gold;
+        }
+    }
+
+    .mo-price {
+        font-size: 18px;
+        color: $text;
+        font-family: bold;
+        margin-left: 6px;
+
+        #{$ltr} & {
+            margin-right: 6px;
+            margin-left: 0;
+        }
+    }
+
+    .mo-old-price {
+        font-size: 18px;
+        color: $price;
+        text-decoration: line-through;
+    }
+}
