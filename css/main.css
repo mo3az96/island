@@ -372,6 +372,7 @@ html[dir=ltr] .sec-header .nav-li {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding: 5px 25px;
 }
 .sec-header .nav-li:last-of-type {
   border-bottom: none;
@@ -381,7 +382,7 @@ html[dir=ltr] .sec-header .nav-li {
 }
 @media (max-width: 767px) {
   .sec-header .nav-li.lang {
-    display: block !important;
+    display: flex !important;
     position: relative;
     top: auto;
     left: auto;
@@ -1045,6 +1046,7 @@ html[dir=ltr] .lang .lang-dropdown:before {
   margin-top: 15px;
 }
 .cat img {
+  width: 100%;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;

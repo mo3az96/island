@@ -12,6 +12,7 @@
     margin-top: 15px;
 
     img {
+        width: 100%;
         @include transition(all 0.5s ease-in-out);
     }
 
