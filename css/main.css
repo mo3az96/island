@@ -271,7 +271,7 @@ html[dir=ltr] .newsletter-input::placeholder {
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
   border: none;
-  color: #2b3581;
+  color: #1a1a1a;
   background-color: transparent;
   border: none;
   font-size: 18px;
@@ -335,6 +335,22 @@ html[dir=ltr] .sec-header {
 .sec-header::-webkit-scrollbar-thumb {
   background-color: #c19c65;
 }
+.sec-header .lang {
+  display: none;
+}
+@media (max-width: 767px) {
+  .sec-header .lang {
+    display: block;
+    position: absolute;
+    top: 17px;
+    right: 25px;
+    cursor: pointer;
+  }
+  html[dir=ltr] .sec-header .lang {
+    right: auto;
+    left: 25px;
+  }
+}
 .sec-header .close-btn {
   position: absolute;
   font-size: 24px;
@@ -376,18 +392,6 @@ html[dir=ltr] .sec-header .nav-li {
 }
 .sec-header .nav-li:last-of-type {
   border-bottom: none;
-}
-.sec-header .nav-li.lang {
-  display: none !important;
-}
-@media (max-width: 767px) {
-  .sec-header .nav-li.lang {
-    display: flex !important;
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-  }
 }
 .sec-header .nav-anchor {
   font-size: 16px;
@@ -651,7 +655,7 @@ html[dir=ltr] .product .mo-price {
 .loader img {
   width: 200px;
   backface-visibility: hidden;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 @media (max-width: 991px) {
   .loader img {
@@ -661,14 +665,14 @@ html[dir=ltr] .product .mo-price {
 
 .load {
   height: 4px;
-  width: 400px;
+  width: 200px;
   position: relative;
   overflow: hidden;
   background-color: transparent;
 }
 @media (max-width: 767px) {
   .load {
-    width: 300px;
+    width: 100px;
   }
 }
 

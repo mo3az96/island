@@ -7,6 +7,8 @@
     z-index: 9999;
     background-color: rgba($black, 0.502);
     display: none;
+
+
 }
 
 .sec-header {
@@ -42,6 +44,23 @@
 
     scrollbar-width: thin;
     scrollbar-color: #c19c65 #fff;
+
+    .lang {
+        display: none;
+
+        @include xs {
+            display: block;
+            position: absolute;
+            top: 17px;
+            right: 25px;
+            cursor: pointer;
+
+            #{$ltr} & {
+                right: auto;
+                left: 25px;
+            }
+        }
+    }
 
     .close-btn {
         position: absolute;
@@ -86,18 +105,6 @@
 
         &:last-of-type {
             border-bottom: none;
-        }
-
-        &.lang {
-            display: none !important;
-
-            @include xs {
-                display: flex !important;
-                position: relative;
-                top: auto;
-                left: auto;
-                right: auto;
-            }
         }
     }
 

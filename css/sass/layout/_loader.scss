@@ -15,7 +15,7 @@
     img {
         width: 200px;
         backface-visibility: hidden;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
 
         @include sm {
             width: 100px;
@@ -27,13 +27,13 @@
 
 .load {
     height: 4px;
-    width: 400px;
+    width: 200px;
     position: relative;
     overflow: hidden;
     background-color: transparent;
 
     @include xs {
-        width: 300px;
+        width: 100px;
     }
 }
 
