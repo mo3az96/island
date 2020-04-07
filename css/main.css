@@ -340,15 +340,24 @@ html[dir=ltr] .sec-header {
 }
 @media (max-width: 767px) {
   .sec-header .lang {
-    display: block;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #121212;
     position: absolute;
     top: 17px;
     right: 25px;
     cursor: pointer;
   }
+  .sec-header .lang img {
+    margin: 0 5px;
+  }
   html[dir=ltr] .sec-header .lang {
     right: auto;
     left: 25px;
+  }
+  .sec-header .lang:hover {
+    color: #c19c65;
   }
 }
 .sec-header .close-btn {
